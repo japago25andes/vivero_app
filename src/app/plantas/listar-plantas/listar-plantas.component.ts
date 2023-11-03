@@ -18,7 +18,10 @@ export class ListarPlantasComponent implements OnInit {
   ngOnInit(): void {
     this.plantasService.getPlantas().subscribe(data => {
       this.plantas = data;
-      
+
+      // Calcular el número de plantas de interior y de exterior
+      this.interiorCount = this.plantas.filter(planta => planta.tipo === 'Interior').length;
+      this.exteriorCount = this.plantas.filter(planta => planta.tipo === 'Exterior').length;
     });
   }
 }
