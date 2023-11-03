@@ -1,0 +1,9 @@
+/* Aplica negrilla al encabezado de la columna # */
+.table th:nth-child(1) {
+    font-weight: bold;
+}
+
+/* Aplica negrilla a los números de la columna # */
+.table td:nth-child(1) {
+    font-weight: bold;
+}
