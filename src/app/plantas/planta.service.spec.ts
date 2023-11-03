@@ -1,13 +1,17 @@
 import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-import { PlantaService } from './planta.service';
+
+import { PlantasService } from './planta.service';
 
 describe('PlantaService', () => {
-  let service: PlantaService;
+  let service: PlantasService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(PlantaService);
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+    });
+    service = TestBed.inject(PlantasService);
   });
 
   it('should be created', () => {
